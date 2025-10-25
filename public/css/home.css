@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #eae9e7;
+}
+
+.logo-div{
+    margin-left: 1rem;
+}
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 25vh 2rem 5vh 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.hero-colored{
+    color: #5b652b;
+    font-weight: 600;
+}
+
+.hero-second{
+    text-align: right;
+    margin-left: 10px;
+}
+
+.create-join-from-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.create-form,
+.join-form,
+.file-send-info{
+    display: flex;
+    flex-direction: column;
+}
+.create-form input[type='text'],
+.create-form input[type='number'],
+.join-form input[type='text'],
+.join-form input[type='number']
+#file{
+    width: 40vw;
+    border: none;
+    padding: .5rem;
+    margin: .3rem;
+    border-radius: .3rem;
+}
+
+.timer-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.timer-container input{
+    max-width: 10vw;
+}
+
+#rSubmit-create,
+#rSubmit,
+#send{
+    border: none;
+    color: #5b652b;
+    background-color: #dbe0c3;
+    padding: .5rem;
+    margin: .3rem;
+    border-radius: .3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.msg-form-container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15vh 0 10vh 0;
+}
+
+.msg-form{
+    width: 40vw;
+}
+
+.name-expires-container{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.file-send-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#file{
+    border: none;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#leave-room{
+    color: #5b652b;
+    background-color: #dbe0c3;
+    border: none;
+    padding: .4rem;
+    margin: 1rem 0;
+    border-radius: .3rem;
+    font-size: 1rem;
+}
+
+.create-join-radio-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+.create-join-radio-container input{
+    display: none;
+}
+
+.create-join-radio-container label{
+    padding: .3rem;
+}
+
+.create-join-radio-container input:checked + label{
+    background-color: #dbe0c3;
+    color: #5b652b;
+    border-radius: .3rem;
+    box-shadow: #dbe0c3;
+}
