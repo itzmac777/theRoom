@@ -120,7 +120,7 @@
             || createrPassword?.value?.trim() == ' '
             || createrPassword.value == ''
             || createrPassword.value == null ){
-            alert("Room Name and Password cannot be empty")
+            alert("Room Name or Password cannot be empty")
             return
         }
         socket.emit("create-room", {rName: createrName.value, rPassword: createrPassword.value, expiresAt: [hour.value || 0, min.value || 0, sec.value || 0]})
@@ -135,7 +135,7 @@
             || rPassword?.value?.trim() == ' '
             || rPassword.value == ''
             || rPassword.value == null ){
-            alert("Room Name and Password cannot be empty")
+            alert("Room Name or Password cannot be empty")
             return
         }
         socket.emit("join-room", {rName: rName.value, rPassword: rPassword.value})
