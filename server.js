@@ -44,6 +44,17 @@ server.listen(PORT, () => {
 
 //HELPER FUNCTIONS
 function createRoom(roomData, socket) {
+  if (
+    roomData.rName.value?.trim() == "" ||
+    roomData.rName.value == "" ||
+    roomData.rName.value == null ||
+    roomData.rPassword.value?.trim() == "" ||
+    roomData.rPassword.value == "" ||
+    roomData.rPassword.value == null
+  ) {
+    io.to(socket.id).emit("error", "Name and Password cannot be empty")
+    return
+  }
   const roomId = generateHash(roomData.rName + roomData.rPassword)
   if (rooms[roomId]) {
     io.to(socket.id).emit("error", "Room already exists")
@@ -56,6 +67,17 @@ function createRoom(roomData, socket) {
 }
 
 function joinRoom(roomData, socket) {
+  if (
+    roomData.rName.value?.trim() == "" ||
+    roomData.rName.value == "" ||
+    roomData.rName.value == null ||
+    roomData.rPassword.value?.trim() == "" ||
+    roomData.rPassword.value == "" ||
+    roomData.rPassword.value == null
+  ) {
+    io.to(socket.id).emit("error", "Name and Password cannot be empty")
+    return
+  }
   const roomId = generateHash(roomData.rName + roomData.rPassword)
   if (!rooms[roomId]) {
     io.to(socket.id).emit("error", "Room doesn't exists")

@@ -110,6 +110,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    max-width: 40vw;
     justify-content: space-between;
 }
 
@@ -117,6 +118,7 @@ body{
     border: none;
     font-size: 1rem;
     font-style: italic;
+    max-width: 40vw;
 }
 
 #leave-room{
@@ -149,4 +151,29 @@ body{
     color: #5b652b;
     border-radius: .3rem;
     box-shadow: #dbe0c3;
+}
+
+@media screen and (width < 600px){
+    .create-form input[type='text'],
+    .create-form input[type='number'],
+    .join-form input[type='text'],
+    .join-form input[type='number']
+    #file{
+        width: 60vw;
+    }
+}
+
+@media screen and (width < 600px){
+    .name-expires-container{
+        font-size: 1rem;
+    }
+    #file{
+        font-size: .8rem;
+    }
+    .msg-form{
+        width: 60vw;
+    }
+    #leave-room, #send{
+        font-size: .8rem;
+    }
 }
