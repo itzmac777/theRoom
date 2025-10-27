@@ -176,4 +176,7 @@ body{
     #leave-room, #send{
         font-size: .8rem;
     }
+    #fileList{
+        font-size: .8rem;
+    }
 }
